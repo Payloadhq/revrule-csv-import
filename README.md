@@ -2,38 +2,28 @@
 
 **Import a revenue CSV into RevRule as economic events. By Payload.**
 
-Zero-dependency Node.js CLI. Point it at a revenue CSV and it posts each row
-to [RevRule by Payload](https://payloadhq.github.io/), the programmable
-revenue rules engine, as an economic event, so your existing revenue history
-starts flowing through your revenue rules immediately.
+> **Status: early preview.** The CLI source is not published yet: this repo
+> contains no source tree and the package is not on npm, so there is nothing
+> to install right now. Everything below is grounded in the repo description
+> and the v1.0.0 release notes only.
 
-## Install
+## Intended usage
 
-```bash
-npx revrule-csv-import <file.csv> --graph GRAPH_ID --api-key KEY
-```
-
-No install needed: `npx` fetches it on demand. Or install globally:
+From the v1.0.0 release notes:
 
 ```bash
-npm install -g revrule-csv-import
+npx revrule-csv-import --graph GRAPH_ID --api-key KEY
 ```
 
-## Usage
-
-```bash
-revrule-csv-import revenue.csv --graph GRAPH_ID --api-key KEY
-```
-
-- `revenue.csv`: the revenue file to import
 - `--graph GRAPH_ID`: the RevRule graph the events belong to
-- `--api-key KEY`: your RevRule API key (kept out of the repo; pass via
-  environment variable if you prefer)
+- `--api-key KEY`: your RevRule API key
 
-One event per row. The CLI reports how many events were accepted and flags
-rows it couldn't parse, so nothing imports silently.
+Once published, the CLI will post each row of a revenue CSV to
+[RevRule by Payload](https://github.com/Payloadhq/payload-flow), the
+programmable revenue rules engine, as an economic event, so your existing
+revenue history starts flowing through your revenue rules.
 
-## What it doesn't do
+## Intended scope
 
 It imports data. It does not define revenue rules, change payouts, or move
 money. That stays in RevRule.
