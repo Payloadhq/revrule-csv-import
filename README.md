@@ -40,3 +40,9 @@ Built by [Payload](https://payloadhq.github.io/).
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+---
+
+**More from Payload** · [payloadhq.github.io](https://payloadhq.github.io/) · [all Payload repos](https://github.com/Payloadhq)
+
+Related: [payload-flow](https://github.com/Payloadhq/payload-flow) · [revrule-console](https://github.com/Payloadhq/revrule-console)
